@@ -6,7 +6,7 @@ Los usuarios sólo podrán ver sus notas, no tienen acceso a ver notas de otros 
 
 ## VIDEO EXPLICATIVO DE LA WEB ## 
 
-
+https://www.youtube.com/watch?v=HPJeDEjTu00
   
 
 ## Se utilizaron las siguientes tecnologías ## 
