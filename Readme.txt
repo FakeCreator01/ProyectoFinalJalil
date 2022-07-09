@@ -11,24 +11,20 @@ https://www.youtube.com/watch?v=HPJeDEjTu00
 
 ## Se utilizaron las siguientes tecnologías ## 
 
-  
 
 -Python 3.10.3 
 
--Django 4.0.5 
+-Django 4.0.5
 
 -CSS 
 
 -HTML 
 
-  
 
 ## Detalles técnicos de la app (Configuración en Django) ## 
 
-El proyecto se nombró cómo 'src' por convención. 
-
-  
-
+El proyecto se nombró cómo 'src' por convención.
+Se utilizó la base de datos 'SQLite3' que trae por defecto Django.
   
 
 ** APPS ** 
