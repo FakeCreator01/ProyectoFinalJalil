@@ -20,7 +20,6 @@ class ListaNotas(LoginRequiredMixin, ListView):
 
 	#mixins
 	login_url = 'usuario/login'
-	redirect_field_name = 'usuario/login.html'
 
 class CrearNota(LoginRequiredMixin, CreateView):
 	template_name = 'nota/crear-nota.html'
