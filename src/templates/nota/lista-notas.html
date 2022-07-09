@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Inicio
+{% endblock title %}
+
+{% block content %}
+	<div class="glass">
+		<h1>MIS NOTAS</h1>
+		<div class="container">
+			
+			<div class="table">
+				<div class="table-header">
+					<div class="header__item"><p class="filter__link">Titulo</p></div>
+					<div class="header__item"><p class="filter__link">Imagen</p></div>
+					<div class="header__item"><p class="filter__link">Fecha de creación</p></div>
+					<div class="header__item"><p class="filter__link">Opciones</p></div>
+				</div>
+
+					{% if notas %}
+						
+					
+					{% for nota in notas %}
+					<div class="table-content">	
+							
+							<div class="table-row">		
+								<div class="table-data">{{nota.titulo}}</div>
+
+								{% if nota.imagen %}
+									<div class="table-data">
+										<img src="{{nota.imagen.url}}" alt="" style="width: 50px">
+									</div>
+								{% endif %}
+								<div class="table-data">{{nota.fecha}}</div>
+								<div class="table-data">
+								<a href="{% url 'nota:editar-nota' nota.pk %}">Editar</a> | <a href="{% url 'nota:eliminar-nota' nota.pk %}">Borrar</a> | <a href="{% url 'nota:ver-nota' nota.pk %}">Ver</a>
+								</div>
+								
+							</div>
+							<hr>
+						{% endfor %}
+
+						{% else %}
+							<div class="table-data">
+								<h4>¡No hay notas aún!</h4> <a class="button-1" href="{% url 'nota:crear-nota' %}">¡CREA TU PRIMER NOTA!</a>
+							</div>
+					{% endif %}
+					
+				
+			</div>
+		</div>
+		
+	</div>
+{% endblock content %}

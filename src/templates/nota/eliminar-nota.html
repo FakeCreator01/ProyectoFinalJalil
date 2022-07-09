@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Eliminar nota
+{% endblock title %}
+
+
+
+{% block content %}
+	
+	<div class="glass">
+		<form method="POST">
+			{% csrf_token %}
+			<h3>¿Seguro quieres eliminar la nota '{{object}}'</h3>
+			<button class="button-1" type="submit">Sí</button>
+			<a class="button-1" href="{% url 'nota:lista-notas' %}">Cancelar</a>
+		</form>
+	</div>
+
+{% endblock content %}

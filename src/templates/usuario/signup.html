@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}
+  Registro
+{% endblock title %}
+
+
+
+{% block content %}
+  
+
+  <div class="glass">
+    <h1>Registro</h1>
+    <hr>
+    <form method="POST">
+      {% csrf_token %}
+
+      <ul class="register-form">
+        
+        <div>
+
+          <strong>{{form.username.label}}:</strong> {{form.username}}
+          <br>
+          <i>{{form.username.help_text}}</i>
+        </div>
+
+        <div>
+          <strong>{{form.password1.label}}:</strong> {{form.password1}}
+          <br>
+          <i>{{form.password1.help_text}}</i>
+        </div>
+
+        <div>
+          <strong>{{form.password2.label}}:</strong> {{form.password2}}
+          <br>
+          <i>{{form.password2.help_text}}</i>
+        </div>
+
+      </ul>
+      <button class="button-1" type="submit">Registrarse</button>
+    </form>
+  </div>
+{% endblock content %}

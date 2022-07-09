@@ -1,0 +1,15 @@
+<ul class="ul-navbar">
+  <li><a href="{% url 'inicio:inicio' %}">Inicio</a></li>
+  <li><a href="{% url 'nota:lista-notas' %}">Mis notas</a></li>
+  <li><a href="{% url 'nota:crear-nota' %}">Crear Nota</a></li>
+
+  {% if request.user.is_authenticated %}
+    <li style="float:right"><a class="active" href="{% url 'usuario:logout' %}">Logout</a></li>
+    <li style="float:right"><a class="active" href="#">¡Hola {{request.user}}!</a></li>
+  
+  {% else %}
+    <li style="float:right"><a class="active" href="{% url 'usuario:login' %}">Login</a></li>
+    <li style="float:right"><a class="active" href="{% url 'usuario:signup' %}">Signup</a></li>
+  {% endif %}
+  <li style="float:right"><a class="active" href="{% url 'inicio:acerca-de' %}">Acerca de</a></li>
+</ul>

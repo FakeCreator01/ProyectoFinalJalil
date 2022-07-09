@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+	Inicio
+{% endblock title %}
+
+
+
+{% block content %}
+	<div class="glass">
+		{% if request.user.is_authenticated %}
+			<h1>¡Bienvenido a NOTASWEB, {{request.user|upper}}!</h1>
+		{% else %}
+			<h1>¡Bienvenido a NOTASWEB!</h1>
+		{% endif %}
+		
+		<hr>
+		<div>
+		<p>Aquí podrás crear todo tipo de notas para recordar cosas importantes.</p>
+
+		<p>No tendrás que preocuparte por perdidas de archivos.</p>
+		<p>¡Podrás acceder a tus notas desde cualquier lugar!</p>
+		</div>
+
+		<h2>¿Que te gustaría hacer?</h2>
+		{% if request.user.is_authenticated %}
+			<a class="button-1" href="{% url 'nota:crear-nota' %}">Crea una nota</a>
+			<a class="button-1" href="{% url 'nota:lista-notas' %}">Ir a mis notas</a>
+
+		{% else %}
+			<p><i>Oops! Parece que no tienes una cuenta ¡Registrate para empezar a usar la app!</i></p>
+			<a class="button-1" href="{% url 'usuario:signup' %}">Registrarme</a>
+			<a class="button-1" href="{% url 'usuario:login' %}">Iniciar sesión</a>
+
+		{% endif %}
+		
+		
+	</div>
+{% endblock content %}

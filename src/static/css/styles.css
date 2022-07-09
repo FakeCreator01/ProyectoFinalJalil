@@ -1,0 +1,165 @@
+body {
+  font-family: 'PT Sans';
+  font-size: 15px;
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+h1 {
+  text-align: center;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(180,187,233,1);
+  opacity: 0.9;
+  text-shadow: 10px 2px 2px 2px;
+  color: black;
+}
+
+.register-form {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 10px;
+  color: black;
+  opacity: 0.9;
+
+}
+.ul-navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #7E86B1;
+  margin: 10px;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #904473;
+  
+}
+
+.glass {
+  padding: 20px;
+  margin: auto;
+  width: 700px;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+div {
+  margin: 10px;
+}
+
+.button-1 {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
+
+}
+
+.container {
+  max-width: 800px;
+  margin-right:auto;
+  margin-left:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.table {
+  width:100%;
+  border:1px solid $color-form-highlight;
+
+}
+
+.table-header {
+  display:flex;
+  width:100%;
+  background:#000;
+  padding:($half-spacing-unit * 1.5) 0;
+
+}
+
+.table-row {
+  display:flex;
+  width:100%;
+  padding:($half-spacing-unit * 1.5) 0;
+  
+  &:nth-of-type(odd) {
+    background:$color-form-highlight;
+  }
+}
+
+.table-data, .header__item {
+  flex: 1 1 20%;
+  text-align:center;
+}
+
+.header__item {
+  text-transform:uppercase;
+
+}
+
+.filter__link {
+  color:white;
+  text-decoration: none;
+  position:relative;
+  display:inline-block;
+
+}

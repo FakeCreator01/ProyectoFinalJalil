@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}
+	Login
+{% endblock title %}
+
+
+
+{% block content %}
+
+	<div class="glass">
+		<h1>Inicio de sesión</h1>
+		<hr>
+		<ul>
+			<form method="POST">
+			  {% csrf_token %}
+			  <strong>{{form.as_p}}</strong>
+			  <button class="button-1" type="submit">Iniciar sesión</button>
+			</form>
+		</ul>
+	</div>
+	
+{% endblock content %}

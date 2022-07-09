@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Leer tu nota
+{% endblock title %}
+
+
+
+{% block content %}
+	<div class="glass">
+		<h1>{{object.titulo}}</h1>
+		<h2>{{object.subtitulo}}</h2>
+
+		{% if object.imagen %}
+			<img src="{{object.imagen.url}}" alt="" style="width: 400px">
+		{% endif %}
+
+		<p>
+			{{object.texto}}
+		</p>
+
+		<a class="button-1" href="{% url 'nota:lista-notas' %}">Volver a mis notas</a>
+		<a class="button-1" href="{% url 'nota:editar-nota' object.pk %}">Editar esta nota</a>
+	</div>
+	
+{% endblock content %}

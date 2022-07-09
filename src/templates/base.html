@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="imagen/x-icon" href="media/favicon/favicon.png">
+
+	<!-- Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=PT+Sans&display=swap" rel="stylesheet">
+	
+	<title>
+		{% block title %}
+			
+		{% endblock title %}
+	</title>
+
+	<link type="text/css" rel='stylesheet' href="{% static 'css/styles.css' %}">
+
+</head>
+<body>
+	{% include 'snippets/navbar.html' %}
+	
+	{% block content %}
+		
+	{% endblock content %}
+	</div>
+</body>
+</html>

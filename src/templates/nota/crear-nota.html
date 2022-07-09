@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Crear nota
+{% endblock title %}
+
+
+
+{% block content %}
+	<div class="glass">		
+
+		<h1>Crear una nota</h1>
+		<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<div>
+				{{form.titulo.label}}: {{form.titulo}} <i>(Defina tu nota en una palabra)</i>
+			</div>
+
+			<div>
+				{{form.subtitulo.label}}: {{form.subtitulo}} <i>(Pequeña descripción de tu nota)</i>
+			</div>
+
+			<div>
+				{{form.texto.label}}: {{form.texto}} <i>(Crea tu nota)</i>
+			</div>
+
+			<div>
+				{{form.imagen.label}}: {{form.imagen}}
+			</div>
+
+			<button class="button-1" type="submit">Crear</button>
+		</form>
+	</div>
+
+{% endblock content %}
