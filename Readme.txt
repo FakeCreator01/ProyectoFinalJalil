@@ -170,3 +170,7 @@ Se crearon dos carpetas dentro del proyecto:
 - 'media': donde se almacenan los archivos tipo media. Dentro de esta carpeta hay dos sub-carpetas. Una para guardar el favicon y otra para guardar las imágenes de las notas de los usuarios (llamada 'imagen_nota') 
 
  
+ ## DEPENDENCIAS ##
+ Se utilizó la librería 'Pillow' para mostrar imagenes.
+ Instalación en consola:
+ pip install pillow
